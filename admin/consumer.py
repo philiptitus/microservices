@@ -31,33 +31,4 @@ print('Started Consuming')
 channel.start_consuming()
 
 channel.close()
-# import pika, json
-# from products.models import Product
 
-
-# params = pika.URLParameters('amqps://jarjpdww:9Td2MIbBV6DWXwcvnXATkSX-1Ia6RRS0@kebnekaise.lmq.cloudamqp.com/jarjpdww')
-
-# connection = pika.BlockingConnection(params)
-
-# channel = connection.channel()
-
-# channel.queue_declare(queue="admin")
-
-
-# def callback(ch, method, properties, body):
-#     print('Received in admin')
-#     id = json.loads(body)
-#     print(id)
-#     product = Product.objects.get(id=id)
-#     product.likes = product.likes + 1
-#     product.save()
-#     print('Product likes increased!')
-
-
-
-# channel.basic_consume(queue='admin', on_message_callback=callback)
-# print('Started Consuming')
-
-# channel.start_consuming()
-
-# channel.close()
